@@ -1,4 +1,4 @@
-import { clamp, LYRIC_EASING, smooth, type Easing } from './util';
+import { clamp, frameCap, LYRIC_EASING, smooth, type Easing } from './util';
 
 /*
  * Auden's synced-lyrics panel, rebuilt on a canvas.
@@ -554,10 +554,13 @@ export function initLyrics(reduce: boolean): () => void {
 
   let raf = 0;
   let started = false;
+  const due = frameCap();
   const frame = (now: number) => {
     if (rows.length && st && (visible || !st.drawn)) {
-      drawLyrics(now);
-      st.drawn = true;
+      if (due(now)) {
+        drawLyrics(now);
+        st.drawn = true;
+      }
     } else last = now;
     if (!reduce) raf = requestAnimationFrame(frame);
   };

@@ -53,7 +53,7 @@ export function initScene(reduce: boolean): () => void {
       tourPhone!.style.transform = `translateX(${side * dx}px) rotateY(${-side * 14 + turn * 18}deg) rotateX(${4 - Math.abs(turn) * 6}deg) rotateZ(${turn * -2}deg) scale(${1 - Math.abs(turn) * 0.06})`;
     }
     tourPhone!.style.setProperty('--sheen', (0.06 + Math.abs(turn) * 0.16).toFixed(3));
-    tourGlow?.style.setProperty('--gx', narrow ? '50%' : `${50 + side * 18}%`);
+    if (tourGlow) tourGlow.style.transform = narrow ? '' : `translateX(${side * 18}%)`;
     tourImgs.forEach((im, i) => im.classList.toggle('on', i === idx));
     tourDots.forEach((d, i) => d.classList.toggle('on', i === idx));
     tourArts.forEach((a, i) => {
