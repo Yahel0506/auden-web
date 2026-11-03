@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="85 75 1080 1080">
+  <style>
+    .m{fill:none;stroke:#000}
+    @media (prefers-color-scheme:dark){.m{stroke:#fff}}
+  </style>
+  <path class="m" d="M150 709 H235 C270 709 290 685 310 650 L390 470 C405 440 420 436 437 436 C455 436 470 455 480 480 L600 785 Q622 812 645 785 L715 590 C725 568 735 570 748 570 C765 570 780 595 790 620 L850 750 Q870 790 890 760 L930 680 Q945 660 960 675 Q975 690 1025 709 H1100" stroke-width="78" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="m" d="M330 624 H530" stroke-width="66"/>
+</svg>
