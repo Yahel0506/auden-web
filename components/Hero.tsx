@@ -4,7 +4,7 @@ export default function Hero() {
       <div className="wash" style={{backgroundImage: 'url(/img/cover-wash.png)'}} aria-hidden="true" />
       <div className="wash-fade" aria-hidden="true" />
       <div className="wrap">
-        <h1 className="rise"><span>Música en streaming y en local.</span><span className="dim">Por fin juntas.</span></h1>
+        <h1 className="rise"><span>Streaming y local.</span><span className="dim">Por fin juntos.</span></h1>
         <div className="row">
           <div className="rise d1">
             <p className="lede">Pon cualquier canción de YouTube Music, trae tus playlists de Spotify y suma los archivos que ya tienes, todo en la misma app. Las playlists que armas aquí se quedan en tu teléfono, sin crear cuenta. Es un fork de <a href="https://github.com/kushagrasinghx/BitChord" target="_blank" rel="noopener">BitChord</a>, gratis y de código abierto.</p>
