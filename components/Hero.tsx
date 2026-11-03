@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <section className="hero" style={{paddingBottom: 0}}>
-      <div className="wash" style={{backgroundImage: 'url(/img/cover.jpg)'}} aria-hidden="true" />
+      <div className="wash" style={{backgroundImage: 'url(/img/cover-wash.png)'}} aria-hidden="true" />
       <div className="wash-fade" aria-hidden="true" />
       <div className="wrap">
         <h1 className="rise"><span>Escucha todo.</span><span className="dim">Quédate con lo tuyo.</span></h1>

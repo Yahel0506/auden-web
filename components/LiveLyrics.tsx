@@ -3,7 +3,7 @@ import type { CSSProperties } from 'react';
 export default function LiveLyrics() {
   return (
     <section className="lyrics" id="letras">
-      <div className="wash" style={{backgroundImage: 'url(/img/cover.jpg)'}} aria-hidden="true" />
+      <div className="wash" style={{backgroundImage: 'url(/img/cover-wash.png)'}} aria-hidden="true" />
       <div className="wrap grid">
         <div className="head">
           <h2>Cada palabra, <span className="dim">a su tiempo.</span></h2>
@@ -16,7 +16,7 @@ export default function LiveLyrics() {
         <div className="live-wrap">
           <div className="phone" id="live-phone"><div className="screen" id="live-screen">
               <div className="app" id="app">
-                <div className="bd" style={{backgroundImage: 'url(/img/cover.jpg)'}} />
+                <div className="bd" style={{backgroundImage: 'url(/img/cover-wash.png)'}} />
                 <div className="shade" />
                 <div className="sb"><span>11:27</span><span className="bat">5G <i /></span></div>
                 <div className="grab" />

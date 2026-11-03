@@ -2,6 +2,21 @@ export const clamp = (v: number, a = 0, b = 1) => Math.min(b, Math.max(a, v));
 export const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 export const smooth = (f: number) => f * f * (3 - 2 * f);
 
+/**
+ * Frame gate for canvas loops: lets through about `fps` draws a second whatever the screen's refresh rate,
+ * so a 120 Hz monitor doesn't redraw (and recomposite) every canvas twice as often.
+ */
+export function frameCap(fps = 60) {
+  const step = 1000 / fps;
+  let last = -Infinity;
+  return (now: number) => {
+    const elapsed = now - last;
+    if (elapsed < step - 1) return false;
+    last = elapsed > step * 2 ? now : now - (elapsed % step);
+    return true;
+  };
+}
+
 export type Easing = (t: number) => number;
 
 /** A CSS-style cubic-bezier easing, solved with Newton's method. */

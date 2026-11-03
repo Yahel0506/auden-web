@@ -1,3 +1,5 @@
+import { frameCap } from './util';
+
 /** The Auden DJ ring: layered loops that wobble, drawn on every `canvas[data-orb]`. */
 
 type Layer = { c: string[]; a: number; s: number; o: [number, number]; w: number };
@@ -76,13 +78,15 @@ export function initOrbs(reduce: boolean): () => void {
   orbs.forEach((o) => io.observe(o.cv));
 
   let raf = 0;
+  const due = frameCap();
   const frame = (now: number) => {
-    orbs.forEach((o) => {
-      if (o.visible || !o.drawn) {
-        drawOrb(o, now);
-        o.drawn = true;
-      }
-    });
+    if (due(now))
+      orbs.forEach((o) => {
+        if (o.visible || !o.drawn) {
+          drawOrb(o, now);
+          o.drawn = true;
+        }
+      });
     if (!reduce) raf = requestAnimationFrame(frame);
   };
   raf = requestAnimationFrame(frame);
