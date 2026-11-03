@@ -4,10 +4,10 @@ export default function Hero() {
       <div className="wash" style={{backgroundImage: 'url(/img/cover-wash.png)'}} aria-hidden="true" />
       <div className="wash-fade" aria-hidden="true" />
       <div className="wrap">
-        <h1 className="rise"><span>Escucha todo.</span><span className="dim">Quédate con lo tuyo.</span></h1>
+        <h1 className="rise"><span>Streaming y local.</span><span className="dim">Por fin juntos.</span></h1>
         <div className="row">
           <div className="rise d1">
-            <p className="lede">Auden es un reproductor para Android que junta YouTube Music y los archivos de tu teléfono. Es un fork de <a href="https://github.com/kushagrasinghx/BitChord" target="_blank" rel="noopener">BitChord</a>: conserva su reproductor y sus letras, y suma biblioteca local, descargas ordenadas y un DJ que te habla.</p>
+            <p className="lede">Pon cualquier canción de YouTube Music, trae tus playlists de Spotify y suma los archivos que ya tienes, todo en la misma app. Las playlists que armas aquí se quedan en tu teléfono, sin crear cuenta. Es un fork de <a href="https://github.com/kushagrasinghx/BitChord" target="_blank" rel="noopener">BitChord</a>, gratis y de código abierto.</p>
           </div>
           <div className="ctas rise d2">
             <a className="pill white" href="https://github.com/Yahel0506/Auden/releases/latest/download/Auden.apk" target="_blank" rel="noopener"><svg><use href="#android" /></svg>Descargar APK</a>

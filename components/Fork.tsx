@@ -4,7 +4,7 @@ export default function Fork() {
       <div className="wrap grid">
         <div className="head">
           <h2>Un fork, <span className="dim">con orgullo.</span></h2>
-          <p>Auden parte del código de <b>BitChord</b>, de kushagrasinghx. El reproductor al estilo Apple Music, las letras palabra por palabra y el streaming de YouTube Music vienen de ahí. Lo que Auden añade es la biblioteca de un reproductor local de verdad.</p>
+          <p>Auden es un fork de <a href="https://github.com/kushagrasinghx/BitChord" target="_blank" rel="noopener">BitChord</a>, el proyecto que creó <a href="https://github.com/kushagrasinghx" target="_blank" rel="noopener">kushagrasinghx</a>. BitChord puso el encanto: todo YouTube Music, un diseño al estilo Apple Music y letras que se sincronizan palabra por palabra. Auden pone orden en tu música propia: <b>una biblioteca de verdad</b>, <b>descargas en carpetas</b>, playlists sin cuenta y <b>un DJ</b> que arma sets con lo que escuchas.</p>
         </div>
         <div>
           <div className="lineage">

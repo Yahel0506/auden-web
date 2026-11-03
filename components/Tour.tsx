@@ -13,10 +13,10 @@ export default function Tour() {
             <img src="/img/s3.jpg" alt="Biblioteca de Spotify importada" />
             <span className="sheen" /></div></div>
         <div className="tour-copy">
-          <article className="l"><h3>Un Inicio con lo tuyo y lo nuevo.</h3><p>Tus estanterías locales mezcladas con las recomendaciones de YouTube Music. Arriba, el DJ.</p></article>
-          <article className="r"><h3>La portada manda.</h3><p>Ocupa la pantalla y tiñe todo el reproductor. Abajo, la salida de audio real.</p></article>
+          <article className="l"><h3>Local y streaming en un mismo inicio.</h3><p>Tu música del teléfono y lo que te recomienda YouTube Music, en la misma pantalla. Arriba, el DJ listo para armarte un set.</p></article>
+          <article className="r"><h3>Se ve tan bien como suena.</h3><p>La portada llena la pantalla y le da sus colores al reproductor. Abajo ves por dónde sale el audio y si llega intacto a tu DAC.</p></article>
           <article className="l"><h3>Elige de dónde sale la letra.</h3><p>BetterLyrics, Musixmatch, LRCLIB, KuGou y más. Cada proveedor se guarda como una variante.</p></article>
-          <article className="r"><h3>Cada canción, a tu manera.</h3><p>Desde su menú ves dónde está guardada, la borras o cambias la letra que usa.</p></article>
+          <article className="r"><h3>Descarga, revisa, borra.</h3><p>Todo desde el menú de la canción, sin buscar en carpetas. Ahí mismo cambias qué letra usa.</p></article>
           <article className="l"><h3>Tu Spotify, en el teléfono.</h3><p>Las playlists que guardas se sincronizan solas. Solo lectura: Auden nunca borra nada.</p></article>
         </div>
         <div className="tour-dots" aria-hidden="true"><i className="on" /><i /><i /><i /><i /></div>
