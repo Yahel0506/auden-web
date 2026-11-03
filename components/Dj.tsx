@@ -7,14 +7,14 @@ export default function Dj() {
         <div>
           <div className="head">
             <span className="chip"><svg><use href="#wave" /></svg>Auden DJ</span>
-            <h2>Tu música, con alguien que la presenta.</h2>
-            <p>Sets temáticos que salen de tu biblioteca y se ponen en cola como cualquier canción. Cada uno abre con una razón: algo sobre ti y sobre la canción con la que arranca.</p>
+            <h2>Tu música ya tiene DJ. <span className="dim">Y habla español.</span></h2>
+            <p>Para cuando no sabes qué poner: el DJ arma sets con tu propia música y te explica con voz por qué suenan. Rescata canciones que tenías olvidadas y, si le pides algo que no tienes, lo busca en YouTube Music siguiendo tus gustos.</p>
           </div>
           <p className="line" aria-live="polite"><span className="src" id="dj-src">español.zip</span><span id="dj-text" /><span className="caret" aria-hidden="true" /></p>
           <div className="facts">
-            <span>Habla en español o inglés</span>
-            <span>Voces de Fish Audio</span>
-            <span>Sin clave de API, el texto sale en pantalla</span>
+            <span>Habla español o inglés</span>
+            <span>Pídele con tus palabras</span>
+            <span>Rescata canciones olvidadas</span>
           </div>
         </div>
         <div className="visual">
