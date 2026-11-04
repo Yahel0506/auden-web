@@ -10,25 +10,26 @@ import LiveLyrics from '@/components/LiveLyrics';
 import Nav from '@/components/Nav';
 import Platforms from '@/components/Platforms';
 import Tour from '@/components/Tour';
+import type { Copy } from '@/lib/copy';
 
-export default function Home() {
+export default function Landing({ t }: { t: Copy }) {
   return (
     <>
       <Icons />
-      <Nav />
+      <Nav t={t} />
       <main id="top">
-        <Hero />
-        <Fork />
-        <Tour />
-        <Dj />
-        <LiveLyrics />
-        <Library />
+        <Hero t={t} />
+        <Fork t={t} />
+        <Tour t={t} />
+        <Dj t={t} />
+        <LiveLyrics t={t} />
+        <Library t={t} />
         {/* Hidden until TV, Wear OS and Web are tested; remove `hidden` in Platforms.tsx to show it. */}
-        <Platforms />
-        <Download />
+        <Platforms t={t} />
+        <Download t={t} />
       </main>
-      <Footer />
-      <Interactions />
+      <Footer t={t} />
+      <Interactions js={t.js} />
     </>
   );
 }
