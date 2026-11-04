@@ -210,7 +210,7 @@ const fmt = (ms: number) => {
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
 };
 
-export function initLyrics(reduce: boolean): () => void {
+export function initLyrics(reduce: boolean, labels: { play: string; pause: string }): () => void {
   const canvas = document.getElementById('lyr') as HTMLCanvasElement | null;
   const app = document.getElementById('app');
   const screen = document.getElementById('live-screen');
@@ -311,7 +311,7 @@ export function initLyrics(reduce: boolean): () => void {
   const onPlay = () => {
     playing = !playing;
     playIco!.setAttribute('href', playing ? '#pause' : '#play');
-    bPlay!.setAttribute('aria-label', playing ? 'Pausar' : 'Reproducir');
+    bPlay!.setAttribute('aria-label', playing ? labels.pause : labels.play);
   };
   const onPrev = () => { pos = LOOP_FROM; };
   const onNext = () => {

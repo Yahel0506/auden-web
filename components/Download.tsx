@@ -1,21 +1,27 @@
-export default function Download() {
+import type { Copy } from '@/lib/copy';
+
+const RELEASES = 'https://github.com/Yahel0506/Auden/releases/latest';
+const VARIANT_LINKS = [`${RELEASES}/download/Auden_arm64-v8a.apk`, `${RELEASES}/download/AudenTV.apk`, `${RELEASES}/download/AudenWear.apk`, RELEASES];
+const VARIANT_KIND = ['APK', 'APK', 'APK', 'GitHub'];
+
+export default function Download({ t }: { t: Copy }) {
+  const d = t.download;
   return (
-    <section className="download" id="descargar">
+    <section className="download" id={t.ids.download}>
       <div className="wrap">
         <div className="orbwrap"><canvas data-orb="bright" aria-hidden="true" /></div>
-        <h2>Llévatelo.</h2>
-        <p className="lede">Siempre la última versión publicada, firmada y directa desde GitHub Releases. Después, la app te avisa sola cuando sale otra.</p>
-        <a className="big-dl" href="https://github.com/Yahel0506/Auden/releases/latest/download/Auden.apk" target="_blank" rel="noopener">
+        <h2>{d.h2}</h2>
+        <p className="lede">{d.lede}</p>
+        <a className="big-dl" href={`${RELEASES}/download/Auden.apk`} target="_blank" rel="noopener">
           <svg><use href="#android" /></svg>
-          <span>Descargar para Android<small>Última versión · APK universal</small></span>
+          <span>{d.button}<small>{d.buttonNote}</small></span>
         </a>
         <div className="variants">
-          <a href="https://github.com/Yahel0506/Auden/releases/latest/download/Auden_arm64-v8a.apk" target="_blank" rel="noopener"><span>arm64-v8a<small>La mayoría de teléfonos actuales, más ligero</small></span><span className="sz">APK</span><svg><use href="#down" /></svg></a>
-          <a href="https://github.com/Yahel0506/Auden/releases/latest/download/AudenTV.apk" target="_blank" rel="noopener"><span>Android TV<small>Para Google TV y Android TV</small></span><span className="sz">APK</span><svg><use href="#down" /></svg></a>
-          <a href="https://github.com/Yahel0506/Auden/releases/latest/download/AudenWear.apk" target="_blank" rel="noopener"><span>Wear OS<small>Para el reloj</small></span><span className="sz">APK</span><svg><use href="#down" /></svg></a>
-          <a href="https://github.com/Yahel0506/Auden/releases/latest" target="_blank" rel="noopener"><span>Todas las versiones<small>Notas de la versión, armeabi-v7a y x86_64</small></span><span className="sz">GitHub</span><svg><use href="#gh" /></svg></a>
+          {d.variants.map((v, i) => (
+            <a key={v.name} href={VARIANT_LINKS[i]} target="_blank" rel="noopener"><span>{v.name}<small>{v.text}</small></span><span className="sz">{VARIANT_KIND[i]}</span><svg><use href={i === 3 ? '#gh' : '#down'} /></svg></a>
+          ))}
         </div>
-        <p className="note">Para instalarlo, activa «Instalar apps desconocidas» en la app con la que lo descargues. Los hashes SHA-256 de cada archivo están en la página de la versión en GitHub.</p>
+        <p className="note">{d.note}</p>
       </div>
     </section>
   );
