@@ -370,6 +370,8 @@ export function initLyrics(reduce: boolean, labels: { play: string; pause: strin
     const c = ctx!;
     const pw = picC.width;
     const ph = picC.height;
+    // Not laid out yet (the phone is off screen or hidden): the pictures have no size, and there is nothing to draw.
+    if (!pw || !ph || !litC.width || !litC.height) return;
     const animating = pos >= L.time && pos <= L.untilMs;
 
     // 1) The finished picture of the line: dim copy plus the lit copy, swept and feathered.

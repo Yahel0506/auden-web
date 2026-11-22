@@ -6,7 +6,7 @@ export default function Footer({ t }: { t: Copy }) {
     <footer>
       <div className="wrap row">
         <div className="legal">
-          <p style={{display: 'flex', alignItems: 'center', gap: 10, color: 'var(--fg)', fontWeight: 700, fontSize: 15, marginBottom: 10}}><svg width={40} height={18}><use href="#logo" /></svg>Auden</p>
+          <p style={{display: 'flex', alignItems: 'center', gap: 10, color: 'var(--fg)', fontWeight: 700, fontSize: 15, marginBottom: 10}}><svg width={18} height={20}><use href="#logo" /></svg>Auden</p>
           <p>{f.legal}</p>
           <p style={{marginTop: 8}}>{f.credits}</p>
         </div>

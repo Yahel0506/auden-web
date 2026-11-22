@@ -7,6 +7,7 @@ export default function Nav({ t }: { t: Copy }) {
         <nav className="bar" aria-label={t.nav.label}>
           <a className="logo" href="#top" aria-label={t.nav.logo}><svg><use href="#logo" /></svg>Auden</a>
           <div className="links">
+            <a href={`#${t.ids.rebrand}`}>{t.nav.rebrand}</a>
             <a href={`#${t.ids.fork}`}>{t.nav.fork}</a>
             <a href={`#${t.ids.dj}`}>Auden DJ</a>
             <a href={`#${t.ids.lyrics}`}>{t.nav.lyrics}</a>
