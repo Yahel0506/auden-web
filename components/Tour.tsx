@@ -2,7 +2,7 @@ import type { CSSProperties } from 'react';
 import type { Copy } from '@/lib/copy';
 
 const SIDES = ['l', 'r', 'l', 'r', 'l'];
-const SHOTS = ['/img/s0.jpg', '/img/s5.jpg', '/img/s1.jpg', '/img/s2.jpg', '/img/s3.jpg'];
+const SHOTS = ['/img/home.jpg', '/img/player.jpg', '/img/output.jpg', '/img/replay.jpg', '/img/transfer.jpg'];
 
 export default function Tour({ t }: { t: Copy }) {
   const { slides } = t.tour;

@@ -5,11 +5,9 @@ export default function Hero({ t }: { t: Copy }) {
   const h = t.hero;
   return (
     <section className="hero" style={{paddingBottom: 0}}>
-      <div className="aurora" aria-hidden="true"><i /><i /><i /></div>
-      <div className="wash-fade" aria-hidden="true" />
       <div className="wrap">
-        <div className="logo-stage" aria-hidden="false"><LogoVideo label={t.rebrand.video} /></div>
-        <h1 className="rise"><span className="grad">{h.h1a}</span><span className="dim">{h.h1b}</span></h1>
+        <div className="logo-stage" aria-hidden="false"><LogoVideo label={h.logoAlt} /></div>
+        <h1 className="rise"><span>{h.h1a}</span><span className="dim">{h.h1b}</span></h1>
         <div className="row">
           <div className="rise d1">
             <p className="lede">{h.lede}</p>
@@ -21,9 +19,9 @@ export default function Hero({ t }: { t: Copy }) {
         </div>
       </div>
       <div className="stage" id="stage" aria-label={h.stage}>
-        <div className="phone p-left" data-fan={-1}><div className="screen"><img src="/img/s5.jpg" alt={h.altLeft} /><span className="sheen" /></div></div>
-        <div className="phone p-mid" data-fan={0}><div className="screen"><img src="/img/s0.jpg" alt={h.altMid} /><span className="sheen" /></div></div>
-        <div className="phone p-right" data-fan={1}><div className="screen"><img src="/img/s6.jpg" alt={h.altRight} /><span className="sheen" /></div></div>
+        <div className="phone p-left" data-fan={-1}><div className="screen"><img src="/img/player.jpg" alt={h.altLeft} /><span className="sheen" /></div></div>
+        <div className="phone p-mid" data-fan={0}><div className="screen"><img src="/img/home.jpg" alt={h.altMid} /><span className="sheen" /></div></div>
+        <div className="phone p-right" data-fan={1}><div className="screen"><img src="/img/library.jpg" alt={h.altRight} /><span className="sheen" /></div></div>
         <div className="stage-fade" aria-hidden="true" />
       </div>
     </section>

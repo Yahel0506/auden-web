@@ -19,7 +19,7 @@ export default function Dj({ t }: { t: Copy }) {
         </div>
         <div className="visual">
           <canvas data-orb="bright" aria-hidden="true" />
-          <div className="phone" id="dj-phone" style={{ '--w': '290px' } as CSSProperties}><div className="screen"><img src={t.lang === 'en' ? '/img/s4-en.jpg' : '/img/s4.jpg'} alt={d.alt} /><span className="sheen" /></div></div>
+          <div className="phone" id="dj-phone" style={{ '--w': '290px' } as CSSProperties}><div className="screen"><img src="/img/dj.jpg" alt={d.alt} /><span className="sheen" /></div></div>
         </div>
       </div>
     </section>
