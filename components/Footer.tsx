@@ -22,6 +22,7 @@ export default function Footer({ t }: { t: Copy }) {
             <a href="https://github.com/Yahel0506/Auden/releases" target="_blank" rel="noopener">Releases</a>
             <a href="https://github.com/Yahel0506/Auden/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">{f.contribute}</a>
             <a href="https://github.com/Yahel0506/Auden/blob/main/LICENSE" target="_blank" rel="noopener">{f.license}</a>
+            <a href={f.switchTo.lang === 'en' ? '/privacy' : '/en/privacy'}>{f.switchTo.lang === 'en' ? 'Política de privacidad' : 'Privacy policy'}</a>
             <a href={f.switchTo.href} hrefLang={f.switchTo.lang} lang={f.switchTo.lang}>{f.switchTo.label}</a>
           </div>
         </div>
